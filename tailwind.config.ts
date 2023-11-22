@@ -1,4 +1,4 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
 
 const config: Config = {
   content: [
@@ -8,13 +8,24 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        'cheerful-green': '#76CC2B',
+        'kelly-green-100': '#E6F7F0',
+        'kelly-green': '#00AA65',
+        'kelly-green-600': '#009C56',
+        'kelly-green-900': '#00110A',
+        'horizon-gray': '#F2F2F2',
+        'midnight-black': '#080D14',
+        'dark-forest-green': '#0E352E',
+        'sunbeam-orange': '#ED5F18',
+        'cactus-green': '#DDF4C6',
+        'sunny-yellow': '#F7D234',
+        'slate-gray': '#434750',
+        'alpine-blue': '#1F7EAD',
       },
     },
   },
   plugins: [],
-}
-export default config
+};
+
+export default config;
