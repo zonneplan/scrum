@@ -17,35 +17,35 @@ const HomePage: React.FC<HomePageProps> = () => {
     return (
         <div className="flex items-center flex-col gap-10 justify-center h-screen bg-gray-200">
             <div className="flex items-center flex-row gap-10 bg-white p-8 rounded shadow-md w-120 md-20">
-                <div className="text-2l font-semibold mb-4 drop-shadow-xl rounded bg-white">
+                <div className="text-2l font-semibold mb-4 drop-shadow-xl p-4 rounded bg-white">
                     naam
                     ?
                 </div>
-                <div className="text-2l font-semibold mb-4 drop-shadow-xl p5 rounded bg-white">
+                <div className="text-2l font-semibold mb-4 drop-shadow-xl p-4 p5 rounded bg-white">
                     naam
                     ?
                 </div>
-                <div className="text-2l font-semibold mb-4 drop-shadow-xl p5 rounded bg-white">
+                <div className="text-2l font-semibold mb-4 drop-shadow-xl p-4 p5 rounded bg-white">
                     naam
                     ?
                 </div>
-                <div className="text-2l font-semibold mb-4 drop-shadow-xl p5 rounded bg-white">
+                <div className="text-2l font-semibold mb-4 drop-shadow-xl p-4 p5 rounded bg-white">
                     naam
                     ?
                 </div>
-                <div className="text-2l font-semibold mb-4 drop-shadow-xl p5 rounded bg-white">
+                <div className="text-2l font-semibold mb-4 drop-shadow-xl p-4 p5 rounded bg-white">
                     naam
                     ?
                 </div>
-                <div className="text-2l font-semibold mb-4 drop-shadow-xl p5 rounded bg-white">
+                <div className="text-2l font-semibold mb-4 drop-shadow-xl p-4 p5 rounded bg-white">
                     naam
                     ?
                 </div>
-                <div className="text-2l font-semibold mb-4 drop-shadow-xl p5 rounded bg-white">
+                <div className="text-2l font-semibold mb-4 drop-shadow-xl p-4 p5 rounded bg-white">
                     naam
                     ?
                 </div>
-                <div className="text-2l font-semibold mb-4 drop-shadow-xl p5 rounded bg-white">
+                <div className="text-2l font-semibold mb-4 drop-shadow-xl p-4 p5 rounded bg-white">
                     naam
                     ?
                 </div>
