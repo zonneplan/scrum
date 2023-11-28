@@ -21,6 +21,9 @@ const HomePage: React.FC<HomePageProps> = () => {
     const redirectToNextPage = () => {
         console.log(username);
         console.log(roomCode);
+
+        //redirect to lobby
+        window.location.href = '/lobby';
     };
 
     return (
