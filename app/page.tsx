@@ -33,7 +33,7 @@ export default function Home() {
       <button>versturen</button>
       </form>
       <div>
-      <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
+      <label htmlFor="Name" className="block text-sm font-medium leading-6 text-gray-900">
         Name
       </label>
       <div className="mt-2">
@@ -45,7 +45,7 @@ export default function Home() {
           placeholder="you@example.com"
         />
         <div>
-      <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
+      <label htmlFor="RoomCode" className="block text-sm font-medium leading-6 text-gray-900">
         RoomCode
       </label>
       <div className="mt-2">
@@ -57,6 +57,10 @@ export default function Home() {
           placeholder="xlJKASD7"
         />
       </div>
+      <button type="button"
+        className="rounded bg-indigo-600 px-2 py-1 text-xs font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+      >Join</button>
+      
     </div>
       </div>
     </div>
