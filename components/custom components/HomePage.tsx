@@ -17,11 +17,18 @@ const HomePage: React.FC<HomePageProps> = () => {
         setRoomCode(e.target.value);
     };
 
-    const redirectToNextPage = () => {
+    const redirectToLobbyUsingCode = () => {
         console.log(username);
         console.log(roomCode);
 
-        // Redirect to lobby using useNavigate
+        // Redirect to lobby and join the room with the given code
+        window.location.href = '/lobby';
+    };
+
+    const redirectToNewLobby = () => {
+        console.log(username);
+
+        // Redirect to lobby and create a new room with a random code
         window.location.href = '/lobby';
     };
 
@@ -67,7 +74,7 @@ const HomePage: React.FC<HomePageProps> = () => {
 
                         <button
                             type="button"
-                            onClick={redirectToNextPage}
+                            onClick={redirectToLobbyUsingCode}
                             className="flex-none rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                         >
                             Join Room
@@ -75,7 +82,8 @@ const HomePage: React.FC<HomePageProps> = () => {
                     </div>
                     <p className="mt-4 text-sm leading-6 text-gray-900">
                         Ben jij de baas? Maak een eigen{' '}
-                        <a href="newroom" className="font-semibold text-indigo-600 hover:text-indigo-500">
+                        <a onClick={redirectToLobbyUsingCode}
+                           className="font-semibold text-indigo-600 hover:text-indigo-500">
                             room&nbsp;
                         </a>
                         aan.
