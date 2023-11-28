@@ -1,6 +1,7 @@
 import Pusher from 'pusher';
 
 export async function POST(request: Request) {
+  console.log('POST');
   const pusher = new Pusher({
     appId: process.env['PUSHER_APP_ID'] as string,
     key: process.env['PUSHER_KEY'] as string,
@@ -11,8 +12,9 @@ export async function POST(request: Request) {
 
   const data = await request.json();
   console.log(data);
-  pusher.trigger('lobby-' + data.lobbyCode, 'counter-event', {
+  pusher.trigger('lobby-' + data.roomCode, 'counter-event', {
     message: 'Bonjour',
+    username: data.username,
   });
 
   return new Response('OK');
