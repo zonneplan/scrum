@@ -34,7 +34,13 @@ export default function Home() {
       </form>
       <h5  className="text-6xl font-bold border-black border p-4 rounded-xl bg-kelly-green">
         join scrum</h5>
-        
+
+      <form>
+        <input type="text" name="name" placeholder="name"/><br></br>
+        <input type="text" name="roomcode" placeholder="roomcode" /><br></br>
+        <br></br>
+        <button>versturen</button>
+      </form>
     </main>
     
   )
