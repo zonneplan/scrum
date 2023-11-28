@@ -57,6 +57,9 @@ export default function Home() {
           placeholder="xlJKASD7"
         />
       </div>
+      <button type="button"
+        className="rounded bg-indigo-600 px-4 py-3 text-xs font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+      >Join</button>
     </div>
       </div>
     </div>
