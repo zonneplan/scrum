@@ -2,6 +2,7 @@
 
 import { join } from 'path';
 import { use, useEffect } from 'react';
+import LobbyPage from "@/components/custom components/Lobby";
 
 export const preferredRegion = 'home';
 export const dynamic = 'force-dynamic';
@@ -25,7 +26,7 @@ export default function Lobby() {
 
   return (
     <div>
-      <h1>Lobby</h1>
+        <LobbyPage/>
     </div>
   );
 }
