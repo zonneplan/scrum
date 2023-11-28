@@ -1,23 +1,26 @@
-// import React, { useState } from 'react';
+'use client';
+
+import React, { useState } from 'react';
 
 interface HomePageProps {
 
 }
 
 const HomePage: React.FC<HomePageProps> = () => {
-    // const [username, setUsername] = useState<string>('');
-    // const [roomCode, setRoomCode] = useState<string>('');
+    const [username, setUsername] = useState<string>('');
+    const [roomCode, setRoomCode] = useState<string>('');
 
-    // const handleUsernameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    //     setUsername(e.target.value);
-    // };
+    const handleUsernameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setUsername(e.target.value);
+    };
 
-    // const handleRoomCodeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    //     setRoomCode(e.target.value);
-    // };
+    const handleRoomCodeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setRoomCode(e.target.value);
+    };
 
     const redirectToNextPage = () => {
-        console.log('Redirecting to the next page');
+        console.log(username);
+        console.log(roomCode);
     };
 
     return (
@@ -33,8 +36,8 @@ const HomePage: React.FC<HomePageProps> = () => {
                         type="text"
                         id="username"
                         name="username"
-                        // value={username}
-                        // onChange={handleUsernameChange}
+                        value={username}
+                        onChange={handleUsernameChange}
                         className="mt-1 p-2 w-full border rounded-md"
                     />
                 </div>
@@ -47,14 +50,14 @@ const HomePage: React.FC<HomePageProps> = () => {
                         type="text"
                         id="roomCode"
                         name="roomCode"
-                        // value={roomCode}
-                        // onChange={handleRoomCodeChange}
+                        value={roomCode}
+                        onChange={handleRoomCodeChange}
                         className="mt-1 p-2 w-full border rounded-md"
                     />
                 </div>
 
                 <button
-                    // onClick={redirectToNextPage}
+                    onClick={redirectToNextPage}
                     className="bg-blue-500 text-white p-2 rounded-md w-full hover:bg-blue-600"
                 >
                     Join Room
