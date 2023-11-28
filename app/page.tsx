@@ -28,6 +28,7 @@ export default function Home() {
   }
   return (
     <main className="relative flex min-h-screen flex-col items-center justify-center">
+    <h1>Scrum Poker</h1>
     <Counter />
     <form onSubmit={handleFormSubmit}>
       <button>versturen</button>
@@ -58,7 +59,7 @@ export default function Home() {
         />
       </div>
       <button type="button"
-        className="rounded bg-indigo-600 px-4 py-3 text-xs font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+        className="rounded bg-indigo-600 mt-4 px-4 py-3 text-xs font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
       >Join</button>
     </div>
       </div>
