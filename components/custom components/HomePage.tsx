@@ -1,36 +1,70 @@
 'use client';
 
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+import Pusher from 'pusher-js';
 
-interface HomePageProps {
-}
+interface HomePageProps {}
 
 const HomePage: React.FC<HomePageProps> = () => {
-    const [username, setUsername] = useState<string>('');
-    const [roomCode, setRoomCode] = useState<string>('');
+  const [username, setUsername] = useState<string>('');
+  const [roomCode, setRoomCode] = useState<string>('');
 
-    const handleUsernameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setUsername(e.target.value);
-    };
+  interface Data {
+    message: string;
+    username: string;
+  }
 
-    const handleRoomCodeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setRoomCode(e.target.value);
-    };
+  const handleUsernameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setUsername(e.target.value);
+  };
 
-    const redirectToLobbyUsingCode = () => {
-        console.log(username);
-        console.log(roomCode);
+  const handleRoomCodeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setRoomCode(e.target.value);
+  };
 
-        // Redirect to lobby and join the room with the given code
-        window.location.href = '/lobby';
-    };
+  const createLobby = () => {
+    // const code = generateCode();
+    console.log(roomCode);
 
-    const redirectToNewLobby = () => {
-        console.log(username);
+    const key = process.env['NEXT_PUBLIC_PUSHER_KEY'];
+    const cluster = process.env['NEXT_PUBLIC_PUSHER_CLUSTER'];
 
-        // Redirect to lobby and create a new room with a random code
-        window.location.href = '/lobby';
-    };
+    if (!key || !cluster) {
+      return;
+    }
+
+    const pusher = new Pusher(key, {
+      cluster: cluster,
+    });
+
+    const channel = pusher.subscribe('lobby-' + roomCode);
+
+    // Bind to an event
+    channel.bind('counter-event', (data: Data) => {
+      console.log('hello world1', data.username);
+    });
+  };
+
+  const joinLobby = async () => {
+    console.log('joinLobby' + roomCode);
+
+    // Use the lobbyCode value here
+    const response = await fetch('/api', {
+      method: 'POST',
+      body: JSON.stringify({ roomCode, username }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (response.status == 200) {
+      document.cookie = `username=${username}`;
+      document.cookie = `roomCode=${roomCode}`;
+
+      window.location.href = '/lobby/';
+      return;
+    }
+  };
 
     return (
         // <Router>
@@ -74,7 +108,7 @@ const HomePage: React.FC<HomePageProps> = () => {
 
                         <button
                             type="button"
-                            onClick={redirectToLobbyUsingCode}
+                            onClick={joinLobby}
                             className="flex-none rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                         >
                             Join Room
@@ -82,7 +116,7 @@ const HomePage: React.FC<HomePageProps> = () => {
                     </div>
                     <p className="mt-4 text-sm leading-6 text-gray-900">
                         Ben jij de baas? Maak een eigen{' '}
-                        <a onClick={redirectToLobbyUsingCode}
+                        <a onClick={createLobby}
                            className="font-semibold text-indigo-600 hover:text-indigo-500">
                             room&nbsp;
                         </a>
@@ -91,7 +125,9 @@ const HomePage: React.FC<HomePageProps> = () => {
                 </form>
             </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default HomePage;
