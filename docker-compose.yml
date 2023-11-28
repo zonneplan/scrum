@@ -14,19 +14,7 @@ services:
       POSTGRES_USER: beun
       POSTGRES_DB: beun
     env_file:
-      - .env
-  node:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    volumes:
-      - ./:/app
-    ports:
-      - 3000:3000
-    networks:
-      - beun
-    env_file:
-      .env
+      .env.local
 
 volumes:
   beun:
