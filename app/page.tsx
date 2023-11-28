@@ -38,9 +38,11 @@ export default function Home() {
       <form>
         <input type="text" name="name" placeholder="name"/><br></br>
         <input type="text" name="roomcode" placeholder="roomcode" /><br></br>
+        
         <br></br>
         <button>versturen</button>
       </form>
+
     </main>
     
   )
