@@ -60,7 +60,7 @@ export default function Home() {
           />
         </div>
         <br></br>
-        <Link style={{padding: 5, borderRadius: 8, backgroundColor: "#4CBB17"}} href={"/home"}> 
+        <Link style={{padding: 10, borderRadius: 8, backgroundColor: "#4CBB17"}} href={"/home"}> 
             join
         </Link>
       </div>
