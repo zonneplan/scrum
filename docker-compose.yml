@@ -1,0 +1,35 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:latest
+    ports:
+      - 5432:5432
+    volumes:
+      - beun:/data
+    networks:
+      - beun
+    environment:
+      POSTGRES_PASSWORD: beun
+      POSTGRES_USER: beun
+      POSTGRES_DB: beun
+    env_file:
+      - .env
+  node:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/app
+    ports:
+      - 3000:3000
+    networks:
+      - beun
+    env_file:
+      .env
+
+volumes:
+  beun:
+
+networks:
+  beun:
