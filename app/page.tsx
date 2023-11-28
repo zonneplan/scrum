@@ -32,35 +32,37 @@ export default function Home() {
     <form onSubmit={handleFormSubmit}>
       <button>versturen</button>
       </form>
-      <div>
-      <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
-        Name
-      </label>
-      <div className="mt-2">
-        <input
-          type="name"
-          name="name"
-          id="name"
-          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-          placeholder="you@example.com"
-        />
+      <div style={{backgroundColor:'lightGray', padding:20, borderRadius:20}}>
         <div>
-      <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
-        RoomCode
-      </label>
-      <div className="mt-2">
-        <input
-          type="RoomCode"
-          name="RoomCode"
-          id="RoomCode"
-          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-          placeholder="xlJKASD7"
-        />
+        <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
+          Name
+        </label>
+        <div className="mt-2">
+          <input
+            type="name"
+            name="name"
+            id="name"
+            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            placeholder="you@example.com"
+          />
+          <div>
+        <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
+          RoomCode
+        </label>
+        <div className="mt-2">
+          <input
+            type="RoomCode"
+            name="RoomCode"
+            id="RoomCode"
+            className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            placeholder="xlJKASD7"
+          />
+        </div>
+        <button style={{marginTop:10}} type="button"
+          className="rounded bg-indigo-600 px-4 py-3 text-xs font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+        >Join</button>
       </div>
-      <button type="button"
-        className="rounded bg-indigo-600 px-4 py-3 text-xs font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-      >Join</button>
-    </div>
+      </div>
       </div>
     </div>
     </main>
