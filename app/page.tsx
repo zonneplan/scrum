@@ -28,6 +28,7 @@ export default function Home() {
   }
   return (
     <main className="relative flex min-h-screen flex-col items-center justify-center">
+    <h1>Scrum Poker</h1>
     <Counter />
     <form onSubmit={handleFormSubmit}>
       <button>versturen</button>
