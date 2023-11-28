@@ -2,14 +2,11 @@
 
 import React, { useState } from 'react';
 
-interface HomePageProps {
+interface VotePageProps {
 
 }
 
-const HomePage: React.FC<HomePageProps> = () => {
-    const [username, setUsername] = useState<string>('');
-    const [roomCode, setRoomCode] = useState<string>('');
-
+const VotePage: React.FC<VotePageProps> = () => {
     const vote = (num: Number) => {
         console.log(num);
     };
@@ -130,4 +127,4 @@ const HomePage: React.FC<HomePageProps> = () => {
     );
 };
 
-export default HomePage;
+export default VotePage;
