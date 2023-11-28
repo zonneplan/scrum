@@ -59,9 +59,10 @@ export default function Home() {
             placeholder="xlJKASD7"
           />
         </div>
-        <button style={{marginTop:10}} type="button"
-          className="rounded bg-indigo-600 px-4 py-3 text-xs font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-        >Join</button>
+        <br></br>
+        <Link style={{padding: 5, borderRadius: 8, backgroundColor: "#4CBB17"}} href={"/home"}> 
+            join
+        </Link>
       </div>
       </div>
       </div>
