@@ -10,7 +10,7 @@ export default function RefreshButton(): JSX.Element {
   return (
     <button
       className={`${
-        isPending ? 'cursor-not-allowed text-gray-400' : 'text-gray-600'
+        isPending ? 'cursor-not-allowed text-white-900' : 'text-gray-600'
       } text-sm hover:text-red-700`}
       disabled={isPending}
       onClick={() => {
